@@ -1,0 +1,29 @@
+{
+  "name": "nuxt-relative-dir",
+  "version": "0.0.1",
+  "description": "Nuxt 进行 generate 之后，将路径替换成相对路径并生成新的文件目录",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YuanWing/nuxt-relative-dir.git"
+  },
+  "keywords": [
+    "nuxt",
+    "relative-dir"
+  ],
+  "author": "YuanWing <yuan_wing@163.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/YuanWing/nuxt-relative-dir/issues"
+  },
+  "homepage": "https://github.com/YuanWing/nuxt-relative-dir#readme",
+  "bin": {
+    "nuxt-rd": "./bin/relative-dir"
+  },
+  "dependencies": {
+    "minimist": "^1.2.0"
+  }
+}

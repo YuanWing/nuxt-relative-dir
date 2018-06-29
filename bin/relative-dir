@@ -1,0 +1,42 @@
+#!/usr/bin/env node
+
+const parseArgs = require('minimist');
+const start = require('../index');
+const { version } = require('../package.json');
+const path = process.cwd();
+
+const argv = parseArgs(process.argv.slice(2), {
+  alias: {
+    h: 'help',
+    d: 'dir',
+    s: 'source-dir',
+    v: 'version'
+  }
+});
+
+if (argv.version) {
+  console.log(version);
+  process.exit(0);
+}
+
+if (argv.help) {
+  console.log(`
+    Desription
+      将 Nuxt 使用 generate 生成的静态文件(默认在 /dist 目录内)替换成相对目录;
+      并且生成一个新的目录(默认：hybrid/static)，其中 hybrid 存放 .html 文件， static 存放 css && js && image 文件
+    Usage
+      $ nuxt-rd -d <result dir> -s <generate 源目录>
+    Options
+      --dir, -d         将静态资源替换成相对目录后，生成的新存放目录(默认: hybrid/static)
+      --source-dir, -s  原始的静态资源目录(nuxt generate 默认为/dist)
+      --help, -h        Displays this message
+  `);
+  process.exit(0);
+}
+
+
+function run() {
+  start(argv.dir, argv['source-dir']);
+}
+
+run();
