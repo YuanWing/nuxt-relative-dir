@@ -24,6 +24,7 @@
     "nuxt-rd": "./bin/relative-dir"
   },
   "dependencies": {
+    "debug": "^3.1.0",
     "minimist": "^1.2.0"
   }
 }
