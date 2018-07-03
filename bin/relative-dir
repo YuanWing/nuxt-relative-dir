@@ -1,5 +1,8 @@
 #!/usr/bin/env node
 
+// Show logs
+process.env.DEBUG = process.env.DEBUG || 'nuxt-rd:*';
+
 const parseArgs = require('minimist');
 const start = require('../index');
 const { version } = require('../package.json');
