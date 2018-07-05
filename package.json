@@ -1,6 +1,6 @@
 {
   "name": "nuxt-relative-dir",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Nuxt 进行 generate 之后，将路径替换成相对路径并生成新的文件目录",
   "main": "index.js",
   "scripts": {
